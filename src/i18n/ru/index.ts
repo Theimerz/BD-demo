@@ -55,7 +55,10 @@ export default {
     },
   },
   todos: {
-    status: 'Статус',
+    // status: 'Статус',
+    all: 'Все задачи',
+    completed: 'Завершенные',
+    canceled: 'Не выполненные',
     table: {
       id: 'ID',
       title: 'Название',

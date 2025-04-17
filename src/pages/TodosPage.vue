@@ -22,16 +22,43 @@
           outlined
           clearable
           style="width: 300px"
+          class="q-mr-lg"
           @update:model-value="updateTextFilter"
         />
 
-        <q-toggle
+        <q-btn
+          v-model="statusFilter"
+          :label="$t('todos.all')"
+          color="primary"
+          icon="book"
+          class="q-mr-md"
+          @click="switchFilterTodos(null)"
+        />
+
+        <q-btn
+          v-model="statusFilter"
+          :label="$t('todos.completed')"
+          color="positive"
+          icon="check"
+          class="q-mr-md"
+          @click="switchFilterTodos(true)"
+        />
+
+        <q-btn
+          v-model="statusFilter"
+          :label="$t('todos.canceled')"
+          color="negative"
+          icon="cancel"
+          @click="switchFilterTodos(false)"
+        />
+
+        <!-- <q-toggle
           v-model="statusFilter"
           :label="$t('todos.status')"
           checked-icon="check_circle"
           color="positive"
           unchecked-icon="cancel"
-        />
+        /> -->
 
         <q-space />
 
@@ -84,6 +111,10 @@ const todosFiltered = computed<Array<Todo>>(() => {
 });
 
 const hasTodos = computed<boolean>(() => todosFiltered.value.length > 0);
+
+function switchFilterTodos(filter: boolean | null) {
+  statusFilter.value = filter;
+}
 
 async function getTodos(userId: number) {
   try {
