@@ -20,10 +20,6 @@
         <q-inner-loading showing color="primary" />
       </template>
 
-      <template #no-data>
-        <NoData />
-      </template>
-
       <template #top>
         <q-input
           :model-value="textFilter"
@@ -59,7 +55,6 @@ import { ref, computed, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuasar, Notify } from 'quasar';
 import { fetchPosts } from 'src/api';
-import NoData from 'components/NoData.vue';
 import PostCreateDialog from 'components/PostCreateDialog.vue';
 import PostsDeleteDialog from 'components/PostsDeleteDialog.vue';
 import CommentsDialog from 'components/CommentsDialog.vue';

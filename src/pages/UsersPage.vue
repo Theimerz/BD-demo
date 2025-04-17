@@ -15,10 +15,6 @@
         <q-inner-loading showing color="primary" />
       </template>
 
-      <template #no-data>
-        <NoData />
-      </template>
-
       <template #body-cell-actions="scope">
         <q-td :props="scope">
           <q-btn
@@ -48,7 +44,6 @@
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
-import NoData from 'components/NoData.vue';
 import { useTableColumns } from 'src/composables';
 import { useUsersStore } from 'stores/usersStore';
 

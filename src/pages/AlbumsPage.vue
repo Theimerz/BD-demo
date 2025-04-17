@@ -16,10 +16,6 @@
         <q-inner-loading showing color="primary" />
       </template>
 
-      <template #no-data>
-        <NoData />
-      </template>
-
       <template #header="scope">
         <q-tr :props="scope">
           <q-th auto-width />
@@ -79,7 +75,6 @@
 import type { Album, Photo } from 'src/types';
 import { ref, computed, onMounted, watch } from 'vue';
 import { fetchAlbums, fetchPhotos } from 'src/api';
-import NoData from 'components/NoData.vue';
 import { useRouteId, useTableColumns } from 'src/composables';
 
 const userId = useRouteId();

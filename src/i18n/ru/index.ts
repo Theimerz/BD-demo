@@ -1,6 +1,6 @@
 export default {
   navigation: 'Навигация',
-  filter: 'Фильтр',
+  filter: 'Поиск',
   noData: 'Нет данных',
   cancel: 'Отмена',
   submit: 'Подтвердить',
@@ -8,10 +8,11 @@ export default {
     users: 'Пользователи',
     posts: 'Посты',
     albums: 'Альбомы',
-    todos: 'Список дел',
+    todos: 'Список задач',
   },
   users: {
     currentUser: 'Текущий пользователь',
+    userNotSelected: 'Не выбран',
     table: {
       id: 'ID',
       username: 'Ник',
@@ -61,7 +62,7 @@ export default {
       completed: 'Статус',
     },
     createDialog: {
-      title: 'Создание заметки',
+      title: 'Создание задачи',
       form: {
         title: 'Заголовок',
       },

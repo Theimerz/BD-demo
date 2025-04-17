@@ -15,10 +15,6 @@
         <q-inner-loading showing color="primary" />
       </template>
 
-      <template #no-data>
-        <NoData />
-      </template>
-
       <template #top>
         <q-input
           :model-value="textFilter"
@@ -30,10 +26,10 @@
         />
 
         <q-toggle
-          toggle-indeterminate
           v-model="statusFilter"
           :label="$t('todos.status')"
           checked-icon="check_circle"
+          color="positive"
           unchecked-icon="cancel"
         />
 
@@ -63,7 +59,6 @@ import type { Todo } from 'src/types';
 import { ref, computed, onMounted } from 'vue';
 import { useQuasar } from 'quasar';
 import { fetchTodos } from 'src/api';
-import NoData from 'components/NoData.vue';
 import TodoCreateDialog from 'components/TodoCreateDialog.vue';
 import { useRouteId, useTableColumns } from 'src/composables';
 

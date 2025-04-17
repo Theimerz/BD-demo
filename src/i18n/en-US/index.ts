@@ -1,6 +1,6 @@
 export default {
   navigation: 'Navigation',
-  filter: 'Filter',
+  filter: 'Search',
   noData: 'No Data',
   cancel: 'Cancel',
   submit: 'Submit',
@@ -8,10 +8,11 @@ export default {
     users: 'Users',
     posts: 'Posts',
     albums: 'Albums',
-    todos: 'Todos',
+    todos: 'Task list',
   },
   users: {
     currentUser: 'Current User',
+    userNotSelected: 'Not Selected',
     table: {
       id: 'ID',
       username: 'Username',
@@ -61,7 +62,7 @@ export default {
       completed: 'Status',
     },
     createDialog: {
-      title: 'Create Todo',
+      title: 'Create Task',
       form: {
         title: 'Title',
       },

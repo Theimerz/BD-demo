@@ -18,7 +18,7 @@
       </q-card-section>
 
       <q-card-actions align="right">
-        <q-btn :label="$t('cancel')" color="primary" @click="onDialogCancel" />
+        <q-btn :label="$t('cancel')" color="negative" @click="onDialogCancel" />
 
         <q-btn :loading="isLoading" :label="$t('submit')" color="primary" @click="uploadTodo" />
       </q-card-actions>

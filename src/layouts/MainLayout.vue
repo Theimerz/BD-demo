@@ -12,6 +12,12 @@
           <span class="text-weight-bold">{{ currentUser.username }}</span>
         </div>
 
+        <div v-else class="q-mr-md">
+          <span class="q-mr-xs">{{ $t('users.currentUser') }}:</span>
+
+          <span class="text-weight-bold">{{ $t('users.userNotSelected') }}</span>
+        </div>
+
         <div>
           <q-select
             v-model="locale"
